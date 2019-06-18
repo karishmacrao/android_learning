@@ -1,14 +1,19 @@
 package com.example.roomsample;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.ClipData;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ActionProvider;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -27,6 +32,12 @@ public class ActivityOne extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        ActionBar ab = getSupportActionBar();
+        assert ab != null;
+        ab.setDisplayHomeAsUpEnabled(true);
+
     }
 
     protected void onStart() {
@@ -50,15 +61,22 @@ public class ActivityOne extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
-        return true;
-
+        return super.onCreateOptionsMenu(menu);
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        mUserViewModel.deleteAll();
+        int id = item.getItemId();
+        if(id == android.R.id.home) {
+            finish();
+        } else if(id == R.id.deleteAction) {
+            mUserViewModel.deleteAll();
+
+        }
         return super.onOptionsItemSelected(item);
 
     }
+
 
 }

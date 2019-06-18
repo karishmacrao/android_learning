@@ -5,9 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
+
     tools:context=".ActivityTwo">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
     <TextView
+        android:padding="10dp"
         android:layout_marginTop="10dp"
         android:id="@+id/tname"
         android:layout_width="wrap_content"
@@ -15,6 +24,7 @@
         android:hint="Name" />
 
     <TextView
+        android:padding="10dp"
         android:layout_marginTop="10dp"
         android:id="@+id/tphone"
         android:layout_width="wrap_content"
@@ -22,6 +32,7 @@
         android:hint="Phone number" />
 
     <TextView
+        android:padding="10dp"
         android:layout_marginTop="10dp"
         android:id="@+id/temail"
         android:layout_width="wrap_content"
@@ -29,18 +40,21 @@
         android:hint="Email" />
 
     <TextView
+        android:padding="10dp"
         android:layout_marginTop="10dp"
         android:id="@+id/taddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Address" />
     <Button
+        android:padding="10dp"
         android:id="@+id/teditBtn"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Edit"/>
     <Button
+        android:padding="10dp"
         android:id="@+id/tdeleteBtn"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"

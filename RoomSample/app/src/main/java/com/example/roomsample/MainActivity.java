@@ -58,6 +58,12 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     User user = new User(name, phone, email, address);
                     mUserViewModel.insert(user);
+
+                    nameEt.setText("");
+                    phoneEt.setText("");
+                    emailEt.setText("");
+                    addressEt.setText("");
+
                     startActivity(intent);
                 }
             }

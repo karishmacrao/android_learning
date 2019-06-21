@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NetworkOpTestApp</string>
+    <string name="intro_message">
+        <![CDATA[
+
+
+            This sample demonstrates how to connect to the network and fetch raw HTML using
+            HttpsURLConnection. AsyncTask is used to perform the fetch on a background thread.
+
+
+        ]]>
+    </string>
+    <string name="fetch">fetch</string>
+    <string name="clear">clear</string>
+</resources>

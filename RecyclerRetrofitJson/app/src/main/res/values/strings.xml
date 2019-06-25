@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RecyclerRetrofitJson</string>
+    <string name="item_id">Item ID</string>
+</resources>

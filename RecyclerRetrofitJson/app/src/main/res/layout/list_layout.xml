@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/itemId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Field"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Field"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/itemPrivate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Field"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/ownerId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Field"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/ownerLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Field"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/ownerAvatarUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Field"
+        android:textSize="20sp" />
+</LinearLayout>

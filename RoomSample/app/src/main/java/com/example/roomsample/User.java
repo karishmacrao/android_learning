@@ -22,11 +22,15 @@ public class User {
     @ColumnInfo(name = "address")
     public String address;
 
-    public User(String name, String phone, String email, String address) {
+    @ColumnInfo(name = "imgUrl")
+    public String imgUrl;
+
+    public User(String name, String phone, String email, String address, String imgUrl) {
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.address = address;
+        this.imgUrl = imgUrl;
     }
 
     public int getUid() {
@@ -47,6 +51,14 @@ public class User {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
     public String getName() {

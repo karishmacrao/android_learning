@@ -2,12 +2,20 @@ package com.example.roomsample;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,10 +27,12 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
     class UserViewHolder extends RecyclerView.ViewHolder {
         private final TextView userView1;
         private final TextView userView2;
+        private final ImageView imageView;
 
 
         private UserViewHolder(View itemView) {
             super(itemView);
+            imageView = itemView.findViewById(R.id.photoId);
             userView1 = itemView.findViewById(R.id.title);
             userView2 = itemView.findViewById(R.id.subtitle);
         }
@@ -45,6 +55,11 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
     @Override
     public void onBindViewHolder(UserViewHolder holder, final int position) {
         User current = mUsers.get(position);
+
+
+        //holder.imageView.setImageBitmap();
+
+Log.d("UrlInDB",current.getUid()+" \npath"+current.getImgUrl());
         holder.userView1.setText(current.getName());
         holder.userView2.setText(current.getEmail());
 

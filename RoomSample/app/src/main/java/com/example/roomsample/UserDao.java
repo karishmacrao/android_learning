@@ -34,9 +34,6 @@ public interface UserDao {
     @Delete
     void delete(User user);
 
-    @Query("UPDATE User SET name = :name, phone = :phone, email = :email, address=:address WHERE uid =:id")
-    void update(String name, String phone, String email, String address, int id);
-
     @Update
     void update(User user);
 }

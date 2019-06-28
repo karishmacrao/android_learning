@@ -8,13 +8,13 @@
     android:padding="10dp"
     tools:context=".MainActivity">
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:scaleType="fitXY"
         android:clickable="true"
-        android:src="@drawable/ic_add_a_photo_black_24dp"
+        android:src="@drawable/ic_photo"
         android:id="@+id/iv"/>
     <EditText
         android:id="@+id/name"

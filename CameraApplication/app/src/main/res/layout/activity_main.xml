@@ -15,11 +15,12 @@
         android:text="Select or Capture Image" />
 
     <ImageView
+
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:scaleType="fitXY"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/ic_photo_layaer"
         android:id="@+id/iv"/>
 </LinearLayout>

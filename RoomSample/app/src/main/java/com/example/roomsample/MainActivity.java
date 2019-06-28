@@ -42,7 +42,10 @@ public class MainActivity extends AppCompatActivity {
     String path;
     private static final String IMAGE_DIRECTORY = "/photos";
     private int GALLERY = 1, CAMERA = 2;
-
+public void setImagePath(String url)
+{
+    path=url;
+}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
                     User user = new User(name, phone, email, address,imgUrl);
                     mUserViewModel.insert(user);
 
+                    imageView.setImageResource(R.drawable.ic_photo);
                     nameEt.setText("");
                     phoneEt.setText("");
                     emailEt.setText("");
@@ -154,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == GALLERY) {
             if (data != null) {
                 Uri contentUri = data.getData();
+                Log.d("MM", "onActivityResult: " + contentUri.getPath());
                 try {
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), contentUri);
                     path = saveImage(bitmap);
@@ -187,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
             fo.write(byteArrayOutputStream.toByteArray());
             MediaScannerConnection.scanFile(this, new String[]{f.getPath()}, new String[]{"image/jpeg"}, null);
             fo.close();
-            Log.d("PhotoPath",""+f.getAbsolutePath());
+            setImagePath(f.getAbsolutePath());
             return f.getAbsolutePath();
 
         } catch (IOException e) {

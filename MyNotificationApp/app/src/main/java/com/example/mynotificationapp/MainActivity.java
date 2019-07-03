@@ -63,9 +63,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setSmallIcon(R.mipmap.ic_launcher)
+                .setSmallIcon(R.mipmap.ic_app)
                 .setContentTitle("Title")
-                .setContentText("Message");
+                .setContentText("Message")
+                .setAutoCancel(true);
 
         Intent resultIntent = new Intent(this, MainActivity.class);
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);

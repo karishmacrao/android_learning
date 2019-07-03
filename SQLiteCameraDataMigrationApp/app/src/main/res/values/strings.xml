@@ -1,0 +1,11 @@
+<resources>
+    <string name="APP_NAME">SCDM_App</string>
+    <string name="ADD_USER_NAME_HINT">Full Name</string>
+    <string name="ADD_USER_EMAIL_HINT">Email</string>
+    <string name="ADD_USER_ADDRESS_HINT">Address</string>
+    <string name="ADD_USER_PHONE_HINT">Phone</string>
+    <string name="ADD_USER_SUBMIT_BTN_TEXT">submit</string>
+    <string name="ADD_USER_VIEW_BTN_TEXT">view list</string>
+
+
+</resources>

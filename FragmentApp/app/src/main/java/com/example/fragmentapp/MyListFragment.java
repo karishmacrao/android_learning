@@ -2,6 +2,7 @@ package com.example.fragmentapp;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 import java.util.Objects;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.ListFragment;
 
@@ -34,21 +36,33 @@ public class MyListFragment extends ListFragment {
     };
 
     @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+
+           return inflater.inflate(R.layout.activity_main, container, false);
+    }
+
+    @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                Objects.requireNonNull(getActivity()),
-                android.R.layout.simple_list_item_1,
-                data
-        );
-        this.setListAdapter(adapter);
-
 
     }
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        Toast.makeText(getActivity().getApplicationContext(), "You have clicked on "+data[position], Toast.LENGTH_SHORT).show();
+        Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(), "You have clicked on "+data[position], Toast.LENGTH_SHORT).show();
     }
 }

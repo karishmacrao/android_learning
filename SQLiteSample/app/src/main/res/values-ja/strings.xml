@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">RecyclerSample</string>
 
-    <string name="ADD_USER__hint__name">Name</string>
+    <string name="ADD_USER__hint__name">名</string>
 </resources>

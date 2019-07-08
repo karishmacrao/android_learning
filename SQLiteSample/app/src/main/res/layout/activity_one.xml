@@ -7,6 +7,25 @@
     android:orientation="vertical"
     android:padding="10dp"
     tools:context=".ActivityOne">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/dynamicView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        android:hint="@string/ADD_USER__hint__name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <EditText
         android:id="@+id/name"

@@ -11,7 +11,7 @@ import androidx.room.RoomDatabase;
 import androidx.room.migration.Migration;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-@Database(entities = {User.class}, version = 2, exportSchema = false)
+@Database(entities = {User.class}, version = 3, exportSchema = false)
 public abstract class UserRoomDatabase extends RoomDatabase {
     public abstract UserDao userDao();
 
@@ -21,7 +21,7 @@ public abstract class UserRoomDatabase extends RoomDatabase {
         return INSTANCE;
     }
 
-    static final Migration MIGRATION_1_2 = new Migration(1, 2) {
+    static final Migration MIGRATION_1_2 = new Migration(2, 3) {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
             database.execSQL("ALTER TABLE User " + "ADD COLUMN imgUrl TEXT");

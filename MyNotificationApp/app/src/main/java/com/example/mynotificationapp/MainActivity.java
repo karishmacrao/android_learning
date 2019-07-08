@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(R.mipmap.ic_app)
+                .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setContentTitle("Title")
                 .setContentText("Message")
                 .setAutoCancel(true);

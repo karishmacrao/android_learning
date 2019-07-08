@@ -67,8 +67,6 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
                     .fallback(R.drawable.ic_add_a_photo_black_24dp).apply(cropOptions).into(holder.imageView);
         }
 
-        //holder.imageView.setImageBitmap();
-
         Log.d("UrlInDB", current.getUid() + " \npath" + current.getImgUrl());
         holder.userView1.setText(current.getName());
         holder.userView2.setText(current.getEmail());
